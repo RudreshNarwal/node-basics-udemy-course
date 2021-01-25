@@ -1,0 +1,5 @@
+Testing and debugging strategies in Node.js
+
+1.  Unit Testing ->  with console.log()
+2.  using debugger -> can debug it in debug view of chrome
+3.  Error messages -> Read error messages
