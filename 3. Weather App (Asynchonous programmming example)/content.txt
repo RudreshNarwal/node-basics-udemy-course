@@ -1,3 +1,0 @@
-1. Asynchronous Example
-2. making http request, customizing http request and handling error
-3. callback functionnode
