@@ -1,9 +1,9 @@
 // Callback: callback function is a function which we provide
-// as anargument to another function with the intention of having it called later on.
+// as an argument to another function with the intention of having it called later on.
 
-setTimeout(() => {
-    console.log('Two seconds are up')
-}, 2000)
+// setTimeout(() => {
+//     console.log('Two seconds are up')
+// }, 2000)
 
 // const names = ['Andrew', 'Jen', 'Jess']
 // const shortNames = names.filter((name) => {
@@ -11,7 +11,7 @@ setTimeout(() => {
 // })
 
 
-//---- Why we need callback ---////
+// ---- Why we need callback ---////
 // const geocode = (address, callback) => {
 //     setTimeout(() => {
 //         const data = {
@@ -23,8 +23,8 @@ setTimeout(() => {
 //     }, 2000)
 // }
 //
-// geocode('Philadelphia');
-
+// console.log(geocode('Philadelphia'))
+//
 // const geocode = (address, callback) => {
 //     setTimeout(() => {
 //         const data = {
@@ -41,7 +41,7 @@ setTimeout(() => {
 // })
 
 
-//------Example 2------////
+// ------Example 2------////
 // const add = (a, b, callback) => {
 //     setTimeout(() => {
 //         callback(a + b)

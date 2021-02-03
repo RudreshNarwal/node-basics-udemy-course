@@ -18,6 +18,7 @@ if (!address) {
 
             console.log(data.location)
             console.log(forecastData)
-        })
-    })
+        });
+
+    });
 }

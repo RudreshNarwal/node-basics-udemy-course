@@ -1,0 +1,24 @@
+
+call stack -> 
+The job of the call stack is to track the execution of our program and
+ it does that by keeping track of all of the functions that are currently
+  running.
+
+
+main() -> 
+  The main function gets pushed onto the call stack dropping all the way 
+  to the bottom since there's nothing
+
+Node API -> 
+  event gets registered in node API (for async function)
+
+
+Callback queue-> 
+So when a given event is done in this case when the zero 
+second timer is complete that callback function
+
+Event loop -> 
+ event loop looks at two things it looks at the
+ call stack and it looks at the callback Q If the call stack 
+is empty it's going to run items from the callback Q 
+
