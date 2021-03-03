@@ -12,20 +12,20 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath))
 
-let count = 0
-
-// server(emit) -> client (receive)- countUpdated
-// client(emit) -> server (receive)- increment
-
 io.on('connection', (socket) => {
     console.log('New WebSocket connection')
 
-    socket.emit('countUpdated', count) // sending an event to client
+    socket.emit('message', 'Welcome!')
+    socket.broadcast.emit('message', 'A new user has joined!')
+    // broadcast will send this message to everybody except the current user
 
-    socket.on('increment', () => {
-        count++
-        // socket.emit('countUpdated', count)
-        io.emit('countUpdated', count) // emiting event to every single connection available
+    socket.on('sendMessage', (message) => {
+        io.emit('message', message)
+    })
+
+    socket.on('disconnect', () => {
+        // No need to use broadcast, as the client is already disconnected
+        io.emit('message', 'A user has left!')
     })
 })
 
