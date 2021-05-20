@@ -30,5 +30,5 @@ const myFunction = async () => {
 }
 
 // Hashing doesn't give back the same string after decrypting that's why compare function is provided 
-
+// Hashing algo is one way algo. We can't decypt the string again. we can only compare the string.
 myFunction()

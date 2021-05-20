@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        unique: true,
+        unique: true,  // only allow unique email id's
         required: true,
         trim: true,
         lowercase: true,
@@ -40,8 +40,10 @@ const userSchema = new mongoose.Schema({
             }
         }
     }
-})
+});
 
+
+//for findByCredentials it will call this function
 userSchema.statics.findByCredentials = async (email, password) => {
     const user = await User.findOne({ email })
 
