@@ -44,6 +44,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+// before document is saved this function will take control
 userSchema.pre('save', async function (next) {
     const user = this
 
